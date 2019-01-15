@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: com.rest.RestfulTestApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 12.808 s <<< FAILURE! - in com.rest.RestfulTestApplicationTests
+test_get_all_customers_getForEntity(com.rest.RestfulTestApplicationTests)  Time elapsed: 2.049 s  <<< ERROR!
+org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8080/customers": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at com.rest.RestfulTestApplicationTests.test_get_all_customers_getForEntity(RestfulTestApplicationTests.java:39)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at com.rest.RestfulTestApplicationTests.test_get_all_customers_getForEntity(RestfulTestApplicationTests.java:39)
+
+test_get_all_customers_getForObject(com.rest.RestfulTestApplicationTests)  Time elapsed: 1.011 s  <<< ERROR!
+org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://localhost:8080/customers": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+	at com.rest.RestfulTestApplicationTests.test_get_all_customers_getForObject(RestfulTestApplicationTests.java:30)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at com.rest.RestfulTestApplicationTests.test_get_all_customers_getForObject(RestfulTestApplicationTests.java:30)
+
+test_delete_operation_failed_exception(com.rest.RestfulTestApplicationTests)  Time elapsed: 1.008 s  <<< ERROR!
+java.lang.Exception: Unexpected exception, expected<org.springframework.web.client.HttpClientErrorException> but was<org.springframework.web.client.ResourceAccessException>
+	at com.rest.RestfulTestApplicationTests.test_delete_operation_failed_exception(RestfulTestApplicationTests.java:45)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at com.rest.RestfulTestApplicationTests.test_delete_operation_failed_exception(RestfulTestApplicationTests.java:45)
+
+test_delete_operation_success(com.rest.RestfulTestApplicationTests)  Time elapsed: 1.007 s  <<< ERROR!
+java.lang.Exception: Unexpected exception, expected<org.springframework.web.client.HttpClientErrorException> but was<org.springframework.web.client.ResourceAccessException>
+	at com.rest.RestfulTestApplicationTests.test_delete_operation_success(RestfulTestApplicationTests.java:51)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at com.rest.RestfulTestApplicationTests.test_delete_operation_success(RestfulTestApplicationTests.java:51)
+
